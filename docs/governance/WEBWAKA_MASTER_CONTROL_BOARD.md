@@ -85,7 +85,24 @@ Every tracked item must clearly indicate its position across these seven axes:
 
 ---
 
-## 2. Super Admin Control Plane
+## 2. Repository Topology
+
+**Status:** 🔒 **RATIFIED** (INV-012v2)
+
+This section defines the multi-repository architecture for the WebWaka platform. All repositories are governed by this `webwaka-governance` repository.
+
+| Repository | Purpose | URL |
+| :--- | :--- | :--- |
+| `webwaka-governance` | **Control Plane** | https://github.com/webwakaagent1/webwaka-governance |
+| `webwaka-platform-foundation` | **Foundation Layer** | https://github.com/webwakaagent1/webwaka-platform-foundation |
+| `webwaka-core-services` | **Core Services Layer** | https://github.com/webwakaagent1/webwaka-core-services |
+| `webwaka-capabilities` | **Business Capabilities Layer** | https://github.com/webwakaagent1/webwaka-capabilities |
+| `webwaka-infrastructure` | **Infrastructure & Deployment** | https://github.com/webwakaagent1/webwaka-infrastructure |
+| `webwaka-suites` | **Business Suites Layer** | https://github.com/webwakaagent1/webwaka-suites |
+
+---
+
+## 3. Super Admin Control Plane
 
 This section tracks the capabilities and automation required for the Super Admin to operate the WebWaka platform. This is a core platform primitive, not an afterthought.
 
@@ -607,7 +624,7 @@ This section tracks planned, but not yet started, phases.
 
 | Axis | Value |
 | :--- | :--- |
-| **Status** | 🟡 **Planning Complete - Execution Approved** |
+| **Status** | 🟡 **Phase 1 Complete - Awaiting Verification** |
 | **Platform Layer** | Governance, Infrastructure |
 | **Deployment Mode** | All (affects all deployment modes) |
 | **Actor Scope** | Super Admin (migration executor) |

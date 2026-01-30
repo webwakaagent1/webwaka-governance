@@ -70,6 +70,9 @@ Every execution prompt **must** include the following sections:
 ```markdown
 #### 🚀 EXECUTION PROMPT: [Clear, One-Sentence Title]
 
+**Target Repository:** `[repository-name]`
+**Repository URL:** `[repository-url]`
+
 **Objective:** [Clear, one-sentence description of what must be accomplished]
 
 **Scope:**
@@ -83,14 +86,14 @@ Every execution prompt **must** include the following sections:
 - **Dependencies:** [Links to all dependency definitions]
 
 **Deliverables:**
-1. [Specific, verifiable deliverable 1]
-2. [Specific, verifiable deliverable 2]
+1. [Specific, verifiable deliverable 1 in `target-repository`]
+2. [Specific, verifiable deliverable 2 in `webwaka-governance`]
 ...
 
 **Required Documentation Outputs:**
-- [List of all documentation artifacts that must be created]
+- [List of all documentation artifacts that must be created in `webwaka-governance`]
 
-**Output:** [Instruction on where to document technical details and how to link back to this prompt]
+**Output:** [Instruction on where to commit implementation code and how to link back to this prompt using `repository@commit-sha:path` format]
 ```
 
 ### 4.2. Binding Constraints
@@ -108,10 +111,11 @@ Every execution prompt **must** include the following sections:
 
 This architecture creates a fully traceable and verifiable workflow:
 
-1.  **Assign Task:** An agent is assigned a task by being given a single URL pointing directly to the **Execution Prompt** block within a phase document.
+1.  **Assign Task:** An agent is assigned a task by being given a single URL pointing directly to the **Execution Prompt** block within a phase document in the `webwaka-governance` repository.
 2.  **Navigate & Read:** The agent follows the links within the prompt to the Master Control Board and other canonical documents, guaranteeing it has the full, correct context.
-3.  **Execute:** The agent performs the work as specified in the prompt.
-4.  **Document & Link Back:** The agent creates the required output documentation and then **edits the original phase document** to link the new architecture document back to the prompt. This closes the loop, creating a permanent, bi-directional link between the request and the result.
+3.  **Clone Repositories:** The agent clones both the `webwaka-governance` repository and the specified `Target Repository`.
+4.  **Execute:** The agent performs the implementation work in the `Target Repository`.
+5.  **Document & Link Back:** The agent creates the required output documentation in the `webwaka-governance` repository and then **edits the original phase document** to link the new implementation artifacts back to the prompt using the `repository@commit-sha:path` format. This closes the loop, creating a permanent, bi-directional link between the request and the result across repositories.
 
 ---
 

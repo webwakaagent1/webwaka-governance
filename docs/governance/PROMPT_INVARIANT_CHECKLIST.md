@@ -35,15 +35,16 @@ Every Prompts-as-Artifacts (PaA) execution prompt **MUST** satisfy **ALL** items
 | ☐ | **GitHub as SoT** | Prompt MUST include an explicit statement that GitHub is the single source of truth. |
 | ☐ | **Push is Mandatory** | Prompt MUST include an explicit requirement that all work must be committed and pushed. |
 | ☐ | **Work Not Pushed is Invalid** | Prompt MUST include an explicit statement that work not pushed is INVALID. |
-| ☐ | **Repo & Branch Specified** | Prompt MUST clearly specify the target repository and branch for the work. |
+| ✅ | **Target Repo & Branch** | Prompt MUST clearly specify the `Target Repository` and branch for the work. |
+| ✅ | **Governance Repo for Docs** | Prompt MUST require all documentation to be committed to the `webwaka-governance` repository. |
 
 ### C. Evidence & Traceability
 
 | Check | Invariant | Description |
 | :--- | :--- | :--- |
-| ☐ | **Commit SHA Reporting** | Prompt MUST require the final commit SHA(s) to be reported. |
+| ✅ | **Cross-Repo Commit SHAs** | Prompt MUST require the final commit SHA(s) to be reported in `repository@commit-sha` format. |
 | ☐ | **File Manifest** | Prompt MUST require a list of files added, modified, or deleted. |
-| ☐ | **Documentation Links** | Prompt MUST require links to all new or updated documentation. |
+| ✅ | **Cross-Repo Doc Links** | Prompt MUST require links to all new or updated documentation using full cross-repository paths. |
 | ☐ | **MCB Sync Confirmation** | Prompt MUST require the executor to confirm the Master Control Board status has been updated. |
 
 ### D. Verification Hooks
