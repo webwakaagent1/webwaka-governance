@@ -3,7 +3,7 @@
 **Version:** 1.0  
 **Date:** January 30, 2026  
 **Author:** Manus AI  
-**Status:** 🟡 **Authorized for Execution**
+**Status:** 🟡 **Authorized for Execution (v2 Prompt)**
 
 > **This document is subordinate to the Master Control Board.**
 
@@ -161,6 +161,7 @@ Failure to meet any of the above invalidates the execution.
 | January 30, 2026 | ⚪ Planned / Not Started | Phase defined with embedded execution prompt. |
 | January 30, 2026 | 🟡 Authorized for Execution | Founder authorized PF-1 for execution. PaA link prepared and ready for dispatch. |
 | January 30, 2026 | 🔴 Governance Hardening | Prompt v1 deprecated. Prompt v2 created with mandatory invariants. |
+| January 30, 2026 | 🟡 Authorized for Execution (v2) | Founder authorized PF-1 for execution under v2 prompt with full governance enforcement. |
 
 ---
 
