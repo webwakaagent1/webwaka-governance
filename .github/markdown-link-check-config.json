@@ -1,0 +1,11 @@
+{
+  "ignorePatterns": [
+    {
+      "pattern": "^http://localhost"
+    },
+    {
+      "pattern": "^https://github.com/webwakaagent1/webwaka"
+    }
+  ],
+  "aliveStatusCodes": [200, 206, 429]
+}

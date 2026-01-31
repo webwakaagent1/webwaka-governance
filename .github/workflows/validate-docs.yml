@@ -1,0 +1,36 @@
+name: Validate Documentation
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+
+jobs:
+  validate-markdown:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Check for broken links
+        uses: gaurav-nelson/github-action-markdown-link-check@v1
+        with:
+          use-quiet-mode: 'yes'
+          config-file: '.github/markdown-link-check-config.json'
+          continue-on-error: true
+      
+      - name: Validate YAML files
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y yamllint
+          find . -name "*.yml" -o -name "*.yaml" | xargs yamllint -d relaxed || echo "YAML validation warnings (non-blocking)"
+      
+      - name: Check file structure
+        run: |
+          echo "Checking governance file structure..."
+          test -f docs/governance/WEBWAKA_MASTER_CONTROL_BOARD.md || (echo "MCB missing!" && exit 1)
+          test -d docs/planning || (echo "Planning directory missing!" && exit 1)
+          test -d docs/phases || (echo "Phases directory missing!" && exit 1)
+          echo "File structure validation passed!"
