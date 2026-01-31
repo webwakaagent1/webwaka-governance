@@ -45,13 +45,33 @@ This document must be updated whenever anything changes. No execution is valid u
 
 ---
 
-## Agentic Software Factory Transition
+## Agentic Software Factory - FORMALLY RATIFIED & ACTIVATED
 
-**Status:** 🟢 Complete (January 31, 2026)
+**Status:** 🔒 **RATIFIED & LIVE** (January 31, 2026)
 
-**Summary:** The Agentic Software Factory transition is complete. The factory is now the single source of truth for all platform work, with all tasks tracked as GitHub Issues in the `webwaka-agent-factory` repository. The transition included a full audit, verification, and migration of all work items. The Kanban board and state machine are fully operational.
+**Formal Ratification:** The WebWaka Agentic Software Factory has been formally ratified by the Founder as the sole, canonical system of work for the WebWaka platform. Effective immediately, GitHub is the single source of truth. Any task, issue, decision, plan, or execution that is not represented in GitHub does not exist.
 
-**Link to Ratification Package:** [RATIFICATION_PACKAGE.md](../factory-transition/RATIFICATION_PACKAGE.md)
+**Operating Principles:**
+1. **GitHub is the single source of truth** - All work must flow through GitHub Issues and the defined task lifecycle states
+2. **The Agentic Software Factory is LIVE** - All planning, execution, testing, verification, remediation, and future development must use the factory
+3. **Legacy task tracking is permanently frozen** - No parallel systems, notes, or side task lists are permitted
+4. **Founder is the single human decision authority** - All Founder decisions must be explicit, logged in GitHub, and immutable unless formally re-opened
+5. **Agents are authorized to act** - All Manus agents are authorized to discover issues, propose tasks, brainstorm solutions, execute approved work, and transition task states strictly in accordance with the defined governance rules
+6. **Controlled activation is approved** - The system has been activated using an initial set of live issues to validate task discovery, de-duplication, state transitions, execution discipline, and testing/verification loops
+
+**Repository:** [webwaka-agent-factory](https://github.com/webwakaagent1/webwaka-agent-factory)
+
+**Kanban Board:** [Agent Factory Kanban](https://github.com/users/webwakaagent1/projects/1) (16 state-based columns)
+
+**Documentation:**
+- [Ultimate Ratification Package](../factory-transition/RATIFICATION_PACKAGE_ULTIMATE.md)
+- [Agent Onboarding Guide](https://github.com/webwakaagent1/webwaka-agent-factory/blob/main/docs/onboarding/AGENT_ONBOARDING.md)
+- [Founder Control Guide](https://github.com/webwakaagent1/webwaka-agent-factory/blob/main/docs/onboarding/FOUNDER_GUIDE.md)
+- [State Machine Documentation](https://github.com/webwakaagent1/webwaka-agent-factory/blob/main/docs/STATE_MACHINE.md)
+
+**Activation Status:** 5 live validation issues created to test all critical factory capabilities
+
+> **If it is not in GitHub, it did not happen.**
 
 ---
 
