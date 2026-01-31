@@ -1,14 +1,14 @@
-﻿2026-01-31T11:29:03.4137701Z Post job cleanup.
-2026-01-31T11:29:03.5086616Z [command]/usr/bin/git version
-2026-01-31T11:29:03.5121887Z git version 2.52.0
-2026-01-31T11:29:03.5171438Z Temporarily overriding HOME='/home/runner/work/_temp/dc495f64-e778-4058-a242-a3153c55a106' before making global git config changes
-2026-01-31T11:29:03.5172819Z Adding repository directory to the temporary git global config as a safe directory
-2026-01-31T11:29:03.5178017Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/webwaka-governance/webwaka-governance
-2026-01-31T11:29:03.5211377Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
-2026-01-31T11:29:03.5243261Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
-2026-01-31T11:29:03.5467191Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
-2026-01-31T11:29:03.5486911Z http.https://github.com/.extraheader
-2026-01-31T11:29:03.5499837Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
-2026-01-31T11:29:03.5529861Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
-2026-01-31T11:29:03.5745437Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
-2026-01-31T11:29:03.5774892Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+﻿2026-01-31T11:37:07.5124231Z Post job cleanup.
+2026-01-31T11:37:07.6063584Z [command]/usr/bin/git version
+2026-01-31T11:37:07.6100253Z git version 2.52.0
+2026-01-31T11:37:07.6143489Z Temporarily overriding HOME='/home/runner/work/_temp/cff05d18-a828-4042-8861-104b496379f3' before making global git config changes
+2026-01-31T11:37:07.6144310Z Adding repository directory to the temporary git global config as a safe directory
+2026-01-31T11:37:07.6156260Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/webwaka-governance/webwaka-governance
+2026-01-31T11:37:07.6190745Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-01-31T11:37:07.6222577Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-01-31T11:37:07.6471534Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-01-31T11:37:07.6494727Z http.https://github.com/.extraheader
+2026-01-31T11:37:07.6507133Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-01-31T11:37:07.6537076Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-01-31T11:37:07.6756049Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-01-31T11:37:07.6786578Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url

@@ -38,7 +38,7 @@ Implement a flexible, data-driven pricing engine that supports multi-actor prici
 
 ### 2.3. Required Documentation
 
-1.  **Architecture Document:** Create a detailed architecture document (`/docs/architecture/ARCH_CS4_PRICING_BILLING.md`) that explains the design of the pricing and billing service.
+1.  **Architecture Document:** Create a detailed architecture document (../../architecture/ARCH_CS4_PRICING_BILLING.md)`) that explains the design of the pricing and billing service.
 2.  **API Documentation:** Create comprehensive API documentation for the pricing and billing service.
 3.  **Runbooks:** Create runbooks for:
     *   Configuring pricing models
