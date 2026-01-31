@@ -2,9 +2,11 @@
 
 **CANONICAL LIVING GOVERNANCE DOCUMENT**
 
-**Version: 10.0 (Wave 4 Execution Complete)**  
+**Version: 11.0 (Wave 5 Planning Complete)**  
 **Last Updated:** January 31, 2026  
 **Authority:** Founder
+
+> **Wave 5 Planning Complete:** Wave 5 planning has been completed and approved by the Founder. This wave focuses on three critical platform infrastructure concerns: Automated Testing & CI/CD (PF-4), API Documentation Standards (PF-5), and Platform Observability & Monitoring (ID-4). The wave will be executed in two sub-waves: Wave 5a (PF-4 and PF-5 in parallel) followed by Wave 5b (ID-4). All three phases are assigned to Manus and are fully ready for execution. Comprehensive planning package available at `/docs/planning/wave5/WAVE_5_PLANNING_PACKAGE.md`.
 
 > **Wave 4 Execution Complete:** All five Wave 4 phases (CS-3, SC-1, SC-2, SC-3, ID-2) have been successfully implemented, verified, and are now operational. This wave marks the first execution under the new multi-repository topology and introduces the Suites layer with three comprehensive suites (Commerce, MLAS, Transport & Logistics). The platform has achieved significant milestones in IAM capabilities, partner whitelabel deployment, and sector-specific business solutions. Comprehensive verification report available at `/docs/planning/wave4/WAVE_4_VERIFICATION_REPORT.md`.
 
@@ -348,6 +350,48 @@ This section tracks planned, but not yet started, phases.
 | **Execution Prompt** | [PF-3 v2 Prompt](https://github.com/webwakaagent1/webwaka/blob/main/docs/phases/PF-3_AI_HIGH_COMPLEXITY_READINESS.md#2-execution-prompt-implement-ai--high-complexity-readiness---pf-3-prompt-v2) |
 | **Objective** | Implement model-agnostic AI job orchestration with multi-LLM support, BYOK at all actor levels (Super Admin, Partner, Client, Merchant/Vendor, Agent, Staff), flexible billing (pay-per-request, pay-per-token, bundled, subscription, caps, free tiers, markup, subsidy), abstract capability contracts (generate, classify, recommend, forecast, negotiate), graceful degradation, and support for free/open-source/low-cost models. Also includes vector DB support and geospatial services. |
 
+#### PF-4: Automated Testing & CI/CD Infrastructure
+
+| Axis | Value |
+| :--- | :--- |
+| **Status** | ⚪ **Planned (Wave 5a)** |
+| **Phase ID** | PF-4 |
+| **Platform Layer** | Platform Foundation |
+| **Deployment Mode** | All |
+| **Actor Scope** | Internal (Development & Operations) |
+| **Connectivity Mode** | N/A (Infrastructure) |
+| **Geographic Assumption** | Global-Ready |
+| **Execution Ownership** | Manus |
+| **Risk Class** | Infrastructure, Security |
+| **Dependencies** | All Wave 4 Phases (🟢 Complete) |
+| **Execution Readiness** | ✅ Fully Specifiable Now |
+| **Blockers** | None |
+| **Assigned Platform** | Manus |
+| **Execution Wave** | Wave 5a (Parallel with PF-5) |
+| **Planning Documents** | [Wave 5 Planning Package](/docs/planning/wave5/WAVE_5_PLANNING_PACKAGE.md) |
+| **Objective** | Implement comprehensive automated testing infrastructure and CI/CD pipelines that enable continuous quality assurance across the multi-repository platform topology. Includes unit/integration/E2E test execution automation, GitHub Actions workflows, quality gates enforcement, and multi-repository test coordination. |
+
+#### PF-5: API Documentation Standards (OpenAPI/Swagger)
+
+| Axis | Value |
+| :--- | :--- |
+| **Status** | ⚪ **Planned (Wave 5a)** |
+| **Phase ID** | PF-5 |
+| **Platform Layer** | Platform Foundation |
+| **Deployment Mode** | All |
+| **Actor Scope** | All |
+| **Connectivity Mode** | Fully Online |
+| **Geographic Assumption** | Global-Ready |
+| **Execution Ownership** | Manus |
+| **Risk Class** | UX, Infrastructure |
+| **Dependencies** | All Wave 4 Phases (🟢 Complete) |
+| **Execution Readiness** | ✅ Fully Specifiable Now |
+| **Blockers** | None |
+| **Assigned Platform** | Manus |
+| **Execution Wave** | Wave 5a (Parallel with PF-4) |
+| **Planning Documents** | [Wave 5 Planning Package](/docs/planning/wave5/WAVE_5_PLANNING_PACKAGE.md) |
+| **Objective** | Adopt OpenAPI (Swagger) as the canonical API documentation standard and implement tooling to generate interactive, always-up-to-date API documentation directly from code. Includes OpenAPI spec generation, centralized documentation portal, and cross-layer API compatibility standards. |
+
 ### 7.3. Core Services Expansion Phases
 
 #### CS-1: Financial Ledger Service
@@ -642,6 +686,27 @@ This section tracks planned, but not yet started, phases.
 | **Execution Wave** | Wave 3 (Parallel) |
 | **Execution Prompt** | `/docs/phases/ID-3_GLOBAL_EXPANSION_MULTI_REGION.md` |
 | **Objective** | Deploy the platform to multiple AWS regions with configurable data residency (Single-Country, Regional, Hybrid, Fully Sovereign, Client-Owned Sovereignty modes), data classification enforcement (Identity, Transactional, Operational, Content, Analytical/Derived), and cross-border access controls (explicit, logged, auditable, revocable) |
+
+#### ID-4: Platform Observability & Monitoring
+
+| Axis | Value |
+| :--- | :--- |
+| **Status** | ⚪ **Planned (Wave 5b)** |
+| **Phase ID** | ID-4 |
+| **Platform Layer** | Infrastructure |
+| **Deployment Mode** | All |
+| **Actor Scope** | Super Admin, Partner, Client |
+| **Connectivity Mode** | Fully Online |
+| **Geographic Assumption** | Nigeria-First (Cost-Aware), Global-Ready |
+| **Execution Ownership** | Manus |
+| **Risk Class** | Infrastructure, Security, Data |
+| **Dependencies** | All Wave 4 Phases (🟢 Complete), Wave 5a (Recommended) |
+| **Execution Readiness** | ⚠️ Ready with Minor Clarifications |
+| **Blockers** | None (Clarifications are non-blocking) |
+| **Assigned Platform** | Manus |
+| **Execution Wave** | Wave 5b (After Wave 5a) |
+| **Planning Documents** | [Wave 5 Planning Package](/docs/planning/wave5/WAVE_5_PLANNING_PACKAGE.md) |
+| **Objective** | Implement comprehensive platform observability infrastructure including centralized logging (Loki), metrics collection (Prometheus), distributed tracing (Jaeger), visualization (Grafana), and health checks. Supports all deployment modes with cost-aware architecture, opt-in telemetry sharing, and mode-specific alert routing. |
 
 ### 7.7. Repository Topology Migration
 
