@@ -2,11 +2,13 @@
 
 **CANONICAL LIVING GOVERNANCE DOCUMENT**
 
-**Version: 11.0 (Wave 5 Planning Complete)**  
+**Version: 12.0 (Remediation in Progress)**  
 **Last Updated:** January 31, 2026  
 **Authority:** Founder
 
-> **Wave 5 Planning Complete:** Wave 5 planning has been completed and approved by the Founder. This wave focuses on three critical platform infrastructure concerns: Automated Testing & CI/CD (PF-4), API Documentation Standards (PF-5), and Platform Observability & Monitoring (ID-4). The wave will be executed in two sub-waves: Wave 5a (PF-4 and PF-5 in parallel) followed by Wave 5b (ID-4). All three phases are assigned to Manus and are fully ready for execution. Comprehensive planning package available at `/docs/planning/wave5/WAVE_5_PLANNING_PACKAGE.md`.
+> **Remediation in Progress:** On January 31, 2026, a comprehensive platform verification review identified critical quality assurance gaps requiring immediate remediation. The platform is currently executing Wave R1 (Emergency Stabilization) of a 6-wave remediation plan (R1-R6) to achieve production readiness. Estimated timeline: 16-24 weeks (4-6 months). All new feature development (Wave 5+) is paused until remediation is complete. See [Remediation Wave Plan](../planning/remediation/REMEDIATION_WAVE_PLAN.md) and [Platform Verification Report](../reports/WEBWAKA_PLATFORM_VERIFICATION_REPORT.md) for details.
+
+> **Wave 5 Status:** Wave 5 execution has been **PAUSED** pending completion of remediation waves R1-R6. The verification report revealed that 59% of implementations have zero tests, rendering PF-4 (Automated Testing & CI/CD) non-executable without baseline test coverage. PF-5 (API Documentation) and ID-4 (Observability & Monitoring) have been brought forward into remediation Wave R6 to accelerate operational readiness. Wave 5 will be re-planned after remediation is complete.
 
 > **Wave 4 Execution Complete:** All five Wave 4 phases (CS-3, SC-1, SC-2, SC-3, ID-2) have been successfully implemented, verified, and are now operational. This wave marks the first execution under the new multi-repository topology and introduces the Suites layer with three comprehensive suites (Commerce, MLAS, Transport & Logistics). The platform has achieved significant milestones in IAM capabilities, partner whitelabel deployment, and sector-specific business solutions. Comprehensive verification report available at `(../planning/wave4/WAVE_4_VERIFICATION_REPORT.md)
 
@@ -86,6 +88,7 @@ Every tracked item must clearly indicate its position across these seven axes:
 *   **INV-011: Prompts-as-Artifacts (PaA) Execution.** All work must be initiated via a version-controlled, embedded Execution Prompt within a canonical governance document. Ad-hoc, chat-based instructions are non-binding. Execution is not complete until all artifacts are committed and the originating prompt is updated with backlinks. If it isn't documented in a prompt, it didn't happen.
 *   **INV-012: Single-Repository Topology (RETIRED).** ⛔ **RETIRED as of January 30, 2026.** This invariant served its purpose during Waves 1-3 and has been formally superseded by INV-012v2. All platform development previously occurred in the canonical `webwaka` repository (`https://github.com/webwakaagent1/webwaka`) on the `main` branch. This repository has been archived and is now read-only for historical reference.
 *   **INV-012v2: Multi-Repository Topology.** 🔒 **RATIFIED January 30, 2026.** All platform development must occur in the appropriate layer-specific repository (`webwaka-governance`, `webwaka-platform-foundation`, `webwaka-core-services`, `webwaka-capabilities`, `webwaka-infrastructure`, `webwaka-suites`). Implementation code must be placed in `/implementations/<phase-id>/` within the appropriate repository. All repositories are governed by the `webwaka-governance` repository, which serves as the supreme source of truth for the Master Control Board, platform invariants, PaA Model, and all planning documents.
+*   **INV-013: Test-First Development (PROPOSED).** 🟡 **PROPOSED January 31, 2026. Pending ratification before R2 completion.** All platform implementations must include comprehensive automated tests before being marked as "Complete". Test coverage must meet or exceed 70% for all implementations. Tests must verify functionality, security, performance, and compliance with platform invariants. No phase may be marked "Complete" without: (1) Unit tests for all business logic, (2) Integration tests for service boundaries, (3) End-to-end tests for critical user flows, (4) Security tests for authentication, authorization, and tenant isolation, (5) Performance tests for scalability-critical operations, (6) Compliance tests for regulatory requirements (data residency, audit trails, etc.). CI/CD pipelines must enforce test execution and coverage thresholds. The `--passWithNoTests` flag or equivalent fallback mechanisms are prohibited. Test-first development is mandatory for all future phases.
 
 ---
 
@@ -734,6 +737,101 @@ This section tracks planned, but not yet started, phases.
 ---
 
 > This document is the single source of truth for platform state, execution status, governance visibility, historical record, and forward roadmap. No other document should attempt to summarize the platform lifecycle at this level. Any activity not reflected here is considered unofficial.
+
+---
+
+## 8. Quality Assurance & Remediation Phases
+
+**Context**: On January 31, 2026, a comprehensive platform verification review identified critical quality assurance gaps across the platform. The verification report ([WEBWAKA_PLATFORM_VERIFICATION_REPORT.md](../reports/WEBWAKA_PLATFORM_VERIFICATION_REPORT.md)) found that 59% of implementations (10 of 17 phases) have zero tests, rendering them unverified and not production-ready. This section tracks the remediation work required to achieve production readiness.
+
+**Remediation Strategy**: The remediation is organized into 6 waves (R1-R6) containing 28 phases that address 29 critical issues. The estimated timeline is 16-24 weeks (4-6 months) with high parallelization opportunities.
+
+**Governance**: All remediation phases follow the same governance model as feature phases, including PaA execution, architecture documentation, and verification requirements.
+
+### 8.1. Wave R1: Emergency Stabilization (1-2 weeks)
+
+**Goal**: Fix critical blockers that prevent any meaningful progress  
+**Dependencies**: None (can start immediately)  
+**Parallelization**: High (all phases can run in parallel)  
+**Status**: 🟡 **In Progress** (Execution Started January 31, 2026)
+
+#### R1-A: Fix CS-1 Broken Tests
+
+| Axis | Value |
+| :--- | :--- |
+| **Status** | 🟡 **In Progress** |
+| **Phase ID** | R1-A |
+| **Phase Name** | Fix CS-1 Financial Ledger Broken Tests |
+| **Objective** | Fix TypeScript configuration error preventing CS-1 tests from compiling and executing |
+| **Platform Layer** | Core Services |
+| **Deployment Mode** | All |
+| **Actor Scope** | Internal (Development) |
+| **Connectivity Mode** | N/A (Testing Infrastructure) |
+| **Geographic Assumption** | Global-Ready |
+| **Execution Ownership** | Manus |
+| **Risk Class** | Infrastructure, Security (financial integrity) |
+| **Dependencies** | None |
+| **Execution Readiness** | ✅ Fully Specifiable Now |
+| **Blockers** | None |
+| **Assigned Platform** | Manus |
+| **Execution Wave** | Wave R1 (Parallel) |
+| **Estimated Effort** | 1 day |
+| **Issues Addressed** | ISSUE-001 (CS-1 Financial Ledger Tests Fail to Compile) |
+| **Invariants Enforced** | Enables verification of INV-001, INV-002 |
+| **Exit Criteria** | All 22 CS-1 tests compile, execute, and pass; CI/CD shows green status |
+| **Planning Documents** | [Remediation Wave Plan](../planning/remediation/REMEDIATION_WAVE_PLAN.md) |
+
+#### R1-B: Audit Documentation-Code Alignment
+
+| Axis | Value |
+| :--- | :--- |
+| **Status** | 🟡 **In Progress** |
+| **Phase ID** | R1-B |
+| **Phase Name** | Audit Documentation-Code Alignment |
+| **Objective** | Audit all README files against actual codebase and update to reflect reality |
+| **Platform Layer** | Platform-Wide (All Layers) |
+| **Deployment Mode** | All |
+| **Actor Scope** | Internal (Development & Governance) |
+| **Connectivity Mode** | N/A (Documentation) |
+| **Geographic Assumption** | Global-Ready |
+| **Execution Ownership** | Manus |
+| **Risk Class** | Governance, UX (stakeholder trust) |
+| **Dependencies** | None |
+| **Execution Readiness** | ✅ Fully Specifiable Now |
+| **Blockers** | None |
+| **Assigned Platform** | Manus |
+| **Execution Wave** | Wave R1 (Parallel) |
+| **Estimated Effort** | 1 week |
+| **Issues Addressed** | ISSUE-005 (Severe Documentation-Implementation Mismatch), ISSUE-022 (SC-1 Stub Endpoints) |
+| **Invariants Enforced** | Restores governance credibility |
+| **Exit Criteria** | All READMEs audited; documented features verified or marked as "planned"; stub endpoints documented |
+| **Planning Documents** | [Remediation Wave Plan](../planning/remediation/REMEDIATION_WAVE_PLAN.md) |
+
+#### R1-C: Execute Unknown Tests
+
+| Axis | Value |
+| :--- | :--- |
+| **Status** | 🟡 **In Progress** |
+| **Phase ID** | R1-C |
+| **Phase Name** | Execute and Verify Unknown Test Status |
+| **Objective** | Execute tests for 6 implementations with unknown test status (CS-2, CS-4, CB-2, CB-3, CB-4, PF-1) |
+| **Platform Layer** | Core Services, Capabilities, Platform Foundation |
+| **Deployment Mode** | All |
+| **Actor Scope** | Internal (Development) |
+| **Connectivity Mode** | N/A (Testing Infrastructure) |
+| **Geographic Assumption** | Global-Ready |
+| **Execution Ownership** | Manus |
+| **Risk Class** | Infrastructure |
+| **Dependencies** | None |
+| **Execution Readiness** | ✅ Fully Specifiable Now |
+| **Blockers** | None |
+| **Assigned Platform** | Manus |
+| **Execution Wave** | Wave R1 (Parallel) |
+| **Estimated Effort** | 1 week |
+| **Issues Addressed** | ISSUE-021 (CS-2, CS-4, CB-2, CB-3, CB-4, PF-1 Have Unknown Test Status) |
+| **Invariants Enforced** | Various (depends on service) |
+| **Exit Criteria** | Tests executed for all 6 implementations; results documented; broken tests fixed; coverage measured |
+| **Planning Documents** | [Remediation Wave Plan](../planning/remediation/REMEDIATION_WAVE_PLAN.md) |
 
 ---
 
