@@ -292,4 +292,4 @@ cb2_report_definitions (
 
 ---
 
-**Backlink:** [CB-2 Phase Document](/docs/phases/CB-2_REPORTING_ANALYTICS_CAPABILITY.md)
+**Backlink:** [CB-2 Phase Document](../phases/CB-2_REPORTING_ANALYTICS_CAPABILITY.md)

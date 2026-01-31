@@ -297,4 +297,4 @@ content_versions (
 
 ---
 
-**Backlink:** [CB-3 Phase Document](/docs/phases/CB-3_CONTENT_MANAGEMENT_CAPABILITY.md)
+**Backlink:** [CB-3 Phase Document](../phases/CB-3_CONTENT_MANAGEMENT_CAPABILITY.md)

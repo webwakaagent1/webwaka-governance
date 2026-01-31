@@ -3,7 +3,7 @@
 **Version:** 1.0.0  
 **Date:** January 30, 2026  
 **Status:** 🟢 Complete  
-**Canonical Reference:** [CB-1: MLAS Capability](../../docs/phases/CB-1_MLAS_CAPABILITY.md)
+**Canonical Reference:** [CB-1: MLAS Capability](../phases/CB-1_MLAS_CAPABILITY.md)
 
 ---
 
@@ -692,10 +692,9 @@ npm start
 ## 16. References
 
 - [CB-1 MLAS Capability Phase Definition](../../docs/phases/CB-1_MLAS_CAPABILITY.md)
-- [MLAS Operational Runbook](./RUNBOOK_CB1_MLAS.md)
-- [API Documentation](./API_CB1_MLAS.md)
-- [ADR: Commission Calculation Engine](./ADR_COMMISSION_ENGINE.md)
-
+- [MLAS Operational Runbook](../runbooks/RUNBOOK_CB1_MLAS.md)
+- [API Documentation](../api/API_CB1_MLAS.md)
+- [ADR-001: Commission Calculation Engine](../adrs/ADR_COMMISSION_ENGINE.md)
 ---
 
 **Document Version:** 1.0.0  

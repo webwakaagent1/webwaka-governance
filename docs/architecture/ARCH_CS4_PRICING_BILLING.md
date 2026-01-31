@@ -312,7 +312,7 @@ Every action is logged with:
 ## 9. API Reference
 
 For complete API documentation including request/response schemas, see:
-**[CS4 Pricing & Billing API Documentation](/docs/api/CS4_PRICING_BILLING_API.md)**
+**[CS4 Pricing & Billing API Documentation](../api/CS4_PRICING_BILLING_API.md)**
 
 ### 9.1. Pricing Endpoints Summary
 
@@ -381,5 +381,5 @@ For complete API documentation including request/response schemas, see:
 
 ## 13. Related Documents
 
-- [Master Control Board](/docs/governance/WEBWAKA_MASTER_CONTROL_BOARD.md)
-- [CS-4 Execution Prompt](/docs/phases/CS-4_PRICING_BILLING_SERVICE.md)
+- [Master Control Board](../governance/WEBWAKA_MASTER_CONTROL_BOARD.md)
+- [CS-4 Execution Prompt](../phases/CS-4_PRICING_BILLING_SERVICE.md)

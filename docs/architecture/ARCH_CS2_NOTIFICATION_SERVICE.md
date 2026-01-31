@@ -278,8 +278,8 @@ NOTIFICATION_RETRY_DELAY_MS=5000
 
 ## 12. Link to Phase Document
 
-- **Phase Document:** [CS-2: Notification Service](../phases/CS-2_NOTIFICATION_SERVICE.md)
-- **Master Control Board:** [§7.3 CS-2](../governance/WEBWAKA_MASTER_CONTROL_BOARD.md#cs-2-notification-service)
+- **Phase Document:** [CS-2: Notification Service](../../phases/CS-2_NOTIFICATION_SERVICE.md)
+- **Master Control Board:** [§7.3 CS-2](../../governance/WEBWAKA_MASTER_CONTROL_BOARD.md#cs-2-notification-service)
 
 ---
 
