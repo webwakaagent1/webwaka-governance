@@ -1,0 +1,88 @@
+﻿2026-01-31T11:51:12.2555584Z ##[group]Run actions/checkout@v4
+2026-01-31T11:51:12.2556182Z with:
+2026-01-31T11:51:12.2556431Z   repository: webwakaagent1/webwaka-governance
+2026-01-31T11:51:12.2556865Z   token: ***
+2026-01-31T11:51:12.2557049Z   ssh-strict: true
+2026-01-31T11:51:12.2557227Z   ssh-user: git
+2026-01-31T11:51:12.2557436Z   persist-credentials: true
+2026-01-31T11:51:12.2557647Z   clean: true
+2026-01-31T11:51:12.2557846Z   sparse-checkout-cone-mode: true
+2026-01-31T11:51:12.2558085Z   fetch-depth: 1
+2026-01-31T11:51:12.2558257Z   fetch-tags: false
+2026-01-31T11:51:12.2558439Z   show-progress: true
+2026-01-31T11:51:12.2558831Z   lfs: false
+2026-01-31T11:51:12.2559156Z   submodules: false
+2026-01-31T11:51:12.2559340Z   set-safe-directory: true
+2026-01-31T11:51:12.2559861Z ##[endgroup]
+2026-01-31T11:51:12.3639994Z Syncing repository: webwakaagent1/webwaka-governance
+2026-01-31T11:51:12.3641296Z ##[group]Getting Git version info
+2026-01-31T11:51:12.3641750Z Working directory is '/home/runner/work/webwaka-governance/webwaka-governance'
+2026-01-31T11:51:12.3642427Z [command]/usr/bin/git version
+2026-01-31T11:51:12.3664077Z git version 2.52.0
+2026-01-31T11:51:12.3690492Z ##[endgroup]
+2026-01-31T11:51:12.3706399Z Temporarily overriding HOME='/home/runner/work/_temp/ae39b587-078f-4da3-a01b-8151b363d4b5' before making global git config changes
+2026-01-31T11:51:12.3707875Z Adding repository directory to the temporary git global config as a safe directory
+2026-01-31T11:51:12.3713019Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/webwaka-governance/webwaka-governance
+2026-01-31T11:51:12.3751790Z Deleting the contents of '/home/runner/work/webwaka-governance/webwaka-governance'
+2026-01-31T11:51:12.3755395Z ##[group]Initializing the repository
+2026-01-31T11:51:12.3760395Z [command]/usr/bin/git init /home/runner/work/webwaka-governance/webwaka-governance
+2026-01-31T11:51:12.3859845Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-01-31T11:51:12.3860892Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-01-31T11:51:12.3861665Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-01-31T11:51:12.3862066Z hint: call:
+2026-01-31T11:51:12.3862364Z hint:
+2026-01-31T11:51:12.3862963Z hint: 	git config --global init.defaultBranch <name>
+2026-01-31T11:51:12.3863565Z hint:
+2026-01-31T11:51:12.3863875Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-01-31T11:51:12.3864452Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-01-31T11:51:12.3865143Z hint:
+2026-01-31T11:51:12.3865545Z hint: 	git branch -m <name>
+2026-01-31T11:51:12.3865957Z hint:
+2026-01-31T11:51:12.3866563Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-01-31T11:51:12.3867742Z Initialized empty Git repository in /home/runner/work/webwaka-governance/webwaka-governance/.git/
+2026-01-31T11:51:12.3876183Z [command]/usr/bin/git remote add origin https://github.com/webwakaagent1/webwaka-governance
+2026-01-31T11:51:12.3907956Z ##[endgroup]
+2026-01-31T11:51:12.3908627Z ##[group]Disabling automatic garbage collection
+2026-01-31T11:51:12.3913395Z [command]/usr/bin/git config --local gc.auto 0
+2026-01-31T11:51:12.3940937Z ##[endgroup]
+2026-01-31T11:51:12.3941574Z ##[group]Setting up auth
+2026-01-31T11:51:12.3948376Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-01-31T11:51:12.3978698Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-01-31T11:51:12.4297347Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-01-31T11:51:12.4327261Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-01-31T11:51:12.4545132Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-01-31T11:51:12.4585087Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-01-31T11:51:12.4812495Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-01-31T11:51:12.4848504Z ##[endgroup]
+2026-01-31T11:51:12.4849249Z ##[group]Fetching the repository
+2026-01-31T11:51:12.4856977Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +e027abaee97604f440651a7c7ed9906487ff9735:refs/remotes/pull/1/merge
+2026-01-31T11:51:12.9636849Z From https://github.com/webwakaagent1/webwaka-governance
+2026-01-31T11:51:12.9637927Z  * [new ref]         e027abaee97604f440651a7c7ed9906487ff9735 -> pull/1/merge
+2026-01-31T11:51:12.9673947Z ##[endgroup]
+2026-01-31T11:51:12.9674600Z ##[group]Determining the checkout info
+2026-01-31T11:51:12.9676794Z ##[endgroup]
+2026-01-31T11:51:12.9682470Z [command]/usr/bin/git sparse-checkout disable
+2026-01-31T11:51:12.9724833Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-01-31T11:51:12.9751189Z ##[group]Checking out the ref
+2026-01-31T11:51:12.9755568Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/1/merge
+2026-01-31T11:51:12.9879897Z Note: switching to 'refs/remotes/pull/1/merge'.
+2026-01-31T11:51:12.9880591Z 
+2026-01-31T11:51:12.9880994Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-01-31T11:51:12.9881842Z changes and commit them, and you can discard any commits you make in this
+2026-01-31T11:51:12.9882676Z state without impacting any branches by switching back to a branch.
+2026-01-31T11:51:12.9883155Z 
+2026-01-31T11:51:12.9883457Z If you want to create a new branch to retain commits you create, you may
+2026-01-31T11:51:12.9884181Z do so (now or later) by using -c with the switch command. Example:
+2026-01-31T11:51:12.9884627Z 
+2026-01-31T11:51:12.9884785Z   git switch -c <new-branch-name>
+2026-01-31T11:51:12.9885060Z 
+2026-01-31T11:51:12.9885213Z Or undo this operation with:
+2026-01-31T11:51:12.9885458Z 
+2026-01-31T11:51:12.9885586Z   git switch -
+2026-01-31T11:51:12.9885799Z 
+2026-01-31T11:51:12.9886098Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-01-31T11:51:12.9886403Z 
+2026-01-31T11:51:12.9886737Z HEAD is now at e027aba Merge de45dc79b4b3f3dd92c9a8e0c297563a2de53883 into e50aa13ade93b4e914fb6cb0658b7f54a485106d
+2026-01-31T11:51:12.9891822Z ##[endgroup]
+2026-01-31T11:51:12.9931209Z [command]/usr/bin/git log -1 --format=%H
+2026-01-31T11:51:12.9954912Z e027abaee97604f440651a7c7ed9906487ff9735

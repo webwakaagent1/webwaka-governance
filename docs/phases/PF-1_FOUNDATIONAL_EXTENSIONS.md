@@ -179,11 +179,13 @@ Failure to meet any of the above invalidates the execution.
 - Master Control Board updated (commit `50eac48`)
 
 **Documentation Links:**
-- [Architecture Document](/docs/architecture/ARCH_PF1_FOUNDATIONAL_EXTENSIONS.md)
-- [Implementation Summary](/implementations/pf1-foundational-extensions/IMPLEMENTATION_SUMMARY.md)
-- [API Documentation](/implementations/pf1-foundational-extensions/docs/API_SUPER_ADMIN_CONTROL_PLANE.md)
-- [Instance Provisioning Runbook](/implementations/pf1-foundational-extensions/docs/RUNBOOK_INSTANCE_PROVISIONING.md)
-- [Upgrade Management Runbook](/implementations/pf1-foundational-extensions/docs/RUNBOOK_UPGRADE_MANAGEMENT.md)
+- [Architecture Document](../architecture/ARCH_PF1_FOUNDATIONAL_EXTENSIONS.md)
+<!-- Cross-repository links (in webwaka-platform-foundation):
+- Implementation Summary: /implementations/pf1-foundational-extensions/IMPLEMENTATION_SUMMARY.md
+- API Documentation: /implementations/pf1-foundational-extensions/docs/API_SUPER_ADMIN_CONTROL_PLANE.md
+- Instance Provisioning Runbook: /implementations/pf1-foundational-extensions/docs/RUNBOOK_INSTANCE_PROVISIONING.md
+- Upgrade Management Runbook: /implementations/pf1-foundational-extensions/docs/RUNBOOK_UPGRADE_MANAGEMENT.md
+-->
 
 **Master Control Board Status:** 🟢 Complete
 

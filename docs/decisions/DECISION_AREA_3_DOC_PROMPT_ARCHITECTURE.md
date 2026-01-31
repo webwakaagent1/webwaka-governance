@@ -56,7 +56,7 @@ An execution prompt is a small, standardized block of Markdown that contains:
 > 
 > **Objective:** Implement the core features of the offline-first POS capability.
 > 
-> **Governance:** See [Master Control Board § SC-1](link/to/mcb#sc-1).
+> **Governance:** See [Master Control Board § SC-1](../governance/WEBWAKA_MASTER_CONTROL_BOARD.md#sc-1-commerce-suite-v1).
 > 
 > **Deliverables:**
 > *   A new `pos` package within the `webwaka-suites` repository.

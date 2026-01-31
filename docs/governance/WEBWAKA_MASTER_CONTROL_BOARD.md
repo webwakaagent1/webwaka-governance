@@ -8,9 +8,9 @@
 
 > **Wave 5 Planning Complete:** Wave 5 planning has been completed and approved by the Founder. This wave focuses on three critical platform infrastructure concerns: Automated Testing & CI/CD (PF-4), API Documentation Standards (PF-5), and Platform Observability & Monitoring (ID-4). The wave will be executed in two sub-waves: Wave 5a (PF-4 and PF-5 in parallel) followed by Wave 5b (ID-4). All three phases are assigned to Manus and are fully ready for execution. Comprehensive planning package available at `/docs/planning/wave5/WAVE_5_PLANNING_PACKAGE.md`.
 
-> **Wave 4 Execution Complete:** All five Wave 4 phases (CS-3, SC-1, SC-2, SC-3, ID-2) have been successfully implemented, verified, and are now operational. This wave marks the first execution under the new multi-repository topology and introduces the Suites layer with three comprehensive suites (Commerce, MLAS, Transport & Logistics). The platform has achieved significant milestones in IAM capabilities, partner whitelabel deployment, and sector-specific business solutions. Comprehensive verification report available at `/docs/planning/wave4/WAVE_4_VERIFICATION_REPORT.md`.
+> **Wave 4 Execution Complete:** All five Wave 4 phases (CS-3, SC-1, SC-2, SC-3, ID-2) have been successfully implemented, verified, and are now operational. This wave marks the first execution under the new multi-repository topology and introduces the Suites layer with three comprehensive suites (Commerce, MLAS, Transport & Logistics). The platform has achieved significant milestones in IAM capabilities, partner whitelabel deployment, and sector-specific business solutions. Comprehensive verification report available at `(../planning/wave4/WAVE_4_VERIFICATION_REPORT.md)
 
-> **Post-Migration Operating Rules Ratified:** The Repository Topology Migration is formally CLOSED. The Post-Migration Operating Rules (GOV-004) have been ratified and are now binding. All platform operations must comply with the multi-repository operating model codified in `/docs/governance/POST_MIGRATION_OPERATING_RULES.md`. The five canonical repositories (`webwaka-governance`, `webwaka-platform-foundation`, `webwaka-infrastructure`, `webwaka-core-services`, `webwaka-capabilities`) are now the only valid sources for platform artifacts.
+> **Post-Migration Operating Rules Ratified:** The Repository Topology Migration is formally CLOSED. The Post-Migration Operating Rules (GOV-004) have been ratified and are now binding. All platform operations must comply with the multi-repository operating model codified in (./POST_MIGRATION_OPERATING_RULES.md). The five canonical repositories (`webwaka-governance`, `webwaka-platform-foundation`, `webwaka-infrastructure`, `webwaka-core-services`, `webwaka-capabilities`) are now the only valid sources for platform artifacts.
 
 > **Wave 3 Execution Complete:** All five Wave 3 phases (PF-3, CB-1, CB-4, ID-1, ID-3) have been implemented, verified, and are now operational. The platform has achieved significant milestones in its AI readiness, MLAS capability, inventory management, and deployment automation.
 
@@ -368,7 +368,7 @@ This section tracks planned, but not yet started, phases.
 | **Blockers** | None |
 | **Assigned Platform** | Manus |
 | **Execution Wave** | Wave 5a (Parallel with PF-5) |
-| **Planning Documents** | [Wave 5 Planning Package](/docs/planning/wave5/WAVE_5_PLANNING_PACKAGE.md) |
+| **Planning Documents** | [Wave 5 Planning Package](../planning/wave5/WAVE_5_PLANNING_PACKAGE.md) |
 | **Objective** | Implement comprehensive automated testing infrastructure and CI/CD pipelines that enable continuous quality assurance across the multi-repository platform topology. Includes unit/integration/E2E test execution automation, GitHub Actions workflows, quality gates enforcement, and multi-repository test coordination. |
 
 #### PF-5: API Documentation Standards (OpenAPI/Swagger)
@@ -389,7 +389,7 @@ This section tracks planned, but not yet started, phases.
 | **Blockers** | None |
 | **Assigned Platform** | Manus |
 | **Execution Wave** | Wave 5a (Parallel with PF-4) |
-| **Planning Documents** | [Wave 5 Planning Package](/docs/planning/wave5/WAVE_5_PLANNING_PACKAGE.md) |
+| **Planning Documents** | [Wave 5 Planning Package](../planning/wave5/WAVE_5_PLANNING_PACKAGE.md) |
 | **Objective** | Adopt OpenAPI (Swagger) as the canonical API documentation standard and implement tooling to generate interactive, always-up-to-date API documentation directly from code. Includes OpenAPI spec generation, centralized documentation portal, and cross-layer API compatibility standards. |
 
 ### 7.3. Core Services Expansion Phases
@@ -472,7 +472,7 @@ This section tracks planned, but not yet started, phases.
 | **Assigned Platform** | Replit |
 | **Execution Wave** | Wave 2 |n Date** | January 30, 2026 |
 | **Tests** | 53 passing |
-| **Architecture Doc** | [ARCH_CS4_PRICING_BILLING.md](/docs/architecture/ARCH_CS4_PRICING_BILLING.md) |
+| **Architecture Doc** | [ARCH_CS4_PRICING_BILLING.md](../architecture/ARCH_CS4_PRICING_BILLING.md) |
 
 ### 7.4. Capability Build-Out Phases
 
@@ -512,7 +512,7 @@ This section tracks planned, but not yet started, phases.
 | **Assigned Platform** | Replit |
 | **Execution Wave** | Wave 1 (Parallel) |January 30, 2026 |
 | **Tests** | 55 passing |
-| **Architecture Doc** | [ARCH_CB2_REPORTING_ANALYTICS.md](/docs/architecture/ARCH_CB2_REPORTING_ANALYTICS.md) |
+| **Architecture Doc** | [ARCH_CB2_REPORTING_ANALYTICS.md](../architecture/ARCH_CB2_REPORTING_ANALYTICS.md) |
 
 #### CB-3: Content Management Capability
 
@@ -551,8 +551,8 @@ This section tracks planned, but not yet started, phases.
 | **Execution Wave** | Wave 3 |
 | **Completion Date** | January 30, 2026 |
 | **Tests** | 67 passing |
-| **Architecture Doc** | [ARCH_CB4_INVENTORY_MANAGEMENT.md](/docs/architecture/ARCH_CB4_INVENTORY_MANAGEMENT.md) |
-| **API Doc** | [CB4_INVENTORY_API.md](/docs/api/CB4_INVENTORY_API.md) |
+| **Architecture Doc** | [ARCH_CB4_INVENTORY_MANAGEMENT.md](../architecture/ARCH_CB4_INVENTORY_MANAGEMENT.md) |
+| **API Doc** | [CB4_INVENTORY_API.md](../api/CB4_INVENTORY_API.md) |
 | **Objective** | Build a channel-agnostic inventory management capability that serves as the single source of truth for inventory. Sales channels will subscribe to this capability. |
 
 ### 7.5. Suite Construction Phases
@@ -705,7 +705,7 @@ This section tracks planned, but not yet started, phases.
 | **Blockers** | None (Clarifications are non-blocking) |
 | **Assigned Platform** | Manus |
 | **Execution Wave** | Wave 5b (After Wave 5a) |
-| **Planning Documents** | [Wave 5 Planning Package](/docs/planning/wave5/WAVE_5_PLANNING_PACKAGE.md) |
+| **Planning Documents** | [Wave 5 Planning Package](../planning/wave5/WAVE_5_PLANNING_PACKAGE.md) |
 | **Objective** | Implement comprehensive platform observability infrastructure including centralized logging (Loki), metrics collection (Prometheus), distributed tracing (Jaeger), visualization (Grafana), and health checks. Supports all deployment modes with cost-aware architecture, opt-in telemetry sharing, and mode-specific alert routing. |
 
 ### 7.7. Repository Topology Migration

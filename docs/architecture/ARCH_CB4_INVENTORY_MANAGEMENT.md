@@ -233,7 +233,7 @@ Channels subscribe to:
 
 ## 7. API Reference
 
-For complete API documentation, see: **[CB-4 Inventory API Documentation](/docs/api/CB4_INVENTORY_API.md)**
+For complete API documentation, see: **[CB-4 Inventory API Documentation](../api/CB4_INVENTORY_API.md)**
 
 ### 7.1. Products Endpoints
 | Method | Endpoint | Description |
@@ -306,6 +306,6 @@ For complete API documentation, see: **[CB-4 Inventory API Documentation](/docs/
 
 ## 10. Related Documents
 
-- [CB-4 API Documentation](/docs/api/CB4_INVENTORY_API.md)
-- [CB-4 Operations Runbook](/docs/runbooks/CB4_INVENTORY_OPERATIONS.md)
-- [Master Control Board](/docs/governance/WEBWAKA_MASTER_CONTROL_BOARD.md)
+- [CB-4 API Documentation](../api/CB4_INVENTORY_API.md)
+- [CB-4 Operations Runbook](../runbooks/CB4_INVENTORY_OPERATIONS.md)
+- [Master Control Board](../governance/WEBWAKA_MASTER_CONTROL_BOARD.md)
