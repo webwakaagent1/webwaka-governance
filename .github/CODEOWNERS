@@ -1,0 +1,20 @@
+# WebWaka Governance Repository CODEOWNERS
+# This file defines code ownership and required reviewers for critical governance files
+
+# Governance and phase definitions - Chief of Staff team
+/docs/governance/ @webwaka-factory/chief-of-staff
+/docs/phases/ @webwaka-factory/chief-of-staff
+/docs/invariants/ @webwaka-factory/chief-of-staff
+
+# Security and compliance - Security team
+/docs/security/ @webwaka-factory/security
+/docs/compliance/ @webwaka-factory/security
+
+# Documentation - Documentation team
+/docs/ @webwaka-factory/documentation
+
+# Quality standards - Quality Assurance team
+/docs/quality/ @webwaka-factory/quality-assurance
+
+# Default owners
+* @webwaka-factory/chief-of-staff
