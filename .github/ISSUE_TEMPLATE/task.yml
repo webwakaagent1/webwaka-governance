@@ -1,0 +1,113 @@
+name: Factory Task
+description: Atomic, executable unit of work under the Agentic Factory model
+labels: ["state:discovered"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        # Factory Task
+        
+        This issue represents an atomic unit of work to be executed by a Manus agent.
+        
+        All fields are required. Incomplete issues will be rejected.
+
+  - type: input
+    id: acting_role
+    attributes:
+      label: Acting Role
+      description: Which role will execute this task? (e.g., Execution Agent, QA Agent)
+      placeholder: "Execution Agent"
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem_statement
+    attributes:
+      label: Problem Statement
+      description: What is broken, missing, or required? Be specific and factual.
+      placeholder: "Describe the problem clearly..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: context_references
+    attributes:
+      label: Context & References (Links Only)
+      description: |
+        Provide links to:
+        - Related GitHub issues
+        - Related PRs
+        - Documentation
+        - Architecture decisions
+        - Governance decisions
+      placeholder: |
+        - Issue: #123
+        - PR: #456
+        - Doc: docs/architecture/...
+        - Decision: FD-2026-001
+    validations:
+      required: true
+
+  - type: textarea
+    id: constraints
+    attributes:
+      label: Constraints & Non-Goals
+      description: |
+        What are the explicit constraints?
+        What is explicitly OUT of scope?
+      placeholder: |
+        - Must not require real-time connectivity
+        - Must maintain backward compatibility
+        - Out of scope: Mobile UI changes
+    validations:
+      required: true
+
+  - type: textarea
+    id: implementation_prompt
+    attributes:
+      label: Implementation Prompt
+      description: |
+        Step-by-step instructions sufficient for a new agent to execute without prior context.
+        This must be complete and unambiguous.
+      placeholder: |
+        1. Review the current implementation in file X
+        2. Identify the issue by...
+        3. Implement the fix by...
+        4. Add tests for...
+        5. Update documentation...
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance_criteria
+    attributes:
+      label: Acceptance Criteria
+      description: How do we know this task is complete? List all verifiable criteria.
+      placeholder: |
+        - [ ] Feature works as described
+        - [ ] Tests added and passing
+        - [ ] Documentation updated
+        - [ ] No regressions
+        - [ ] Governance compliance verified
+    validations:
+      required: true
+
+  - type: input
+    id: lead_agent
+    attributes:
+      label: Lead Agent / Team
+      description: Who will review and approve this work?
+      placeholder: "@webwaka-factory/quality-assurance"
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ## Important Notes
+        
+        - **All fields are required.** Incomplete issues will be rejected.
+        - **Implementation Prompt must be executable.** A new agent should be able to complete this task using only the prompt and GitHub links.
+        - **No assumptions.** Do not assume context beyond what is documented in GitHub.
+        - **Governance compliance.** Link relevant Founder Decisions (FD-YYYY-NNN).

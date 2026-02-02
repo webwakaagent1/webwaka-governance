@@ -1,0 +1,120 @@
+name: Founder Decision Request (FDR)
+description: Request a formal Founder decision when ambiguity, conflict, or scope expansion is detected
+title: "FDR: <Short Decision Title>"
+labels:
+  - governance
+  - founder-decision-request
+  - blocked
+assignees:
+  - webwakaagent1
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        # ⚠️ Founder Decision Request
+        
+        This issue blocks execution until the Founder issues a decision.
+        **No agent may proceed while this request is unresolved.**
+
+  - type: input
+    id: requester
+    attributes:
+      label: Requesting Agent / Team
+      description: Which agent or team is requesting this decision?
+      placeholder: "e.g., Quality Assurance Agent, @webwaka-factory/execution-coordination"
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Context & Background
+      description: Provide factual context only. No assumptions. Include links to relevant issues, PRs, and documents.
+      placeholder: |
+        - Issue: #123
+        - PR: #456
+        - Related decision: FD-2026-001
+        - Background: ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: decision_needed
+    attributes:
+      label: Decision Required
+      description: Clearly state what decision is required from the Founder. Be specific.
+      placeholder: "Should we implement feature X as Option A or Option B?"
+    validations:
+      required: true
+
+  - type: textarea
+    id: options
+    attributes:
+      label: Options Considered
+      description: |
+        List viable options with pros/cons (if applicable).
+        Format:
+        
+        **Option A: [Description]**
+        - Pros: ...
+        - Cons: ...
+        
+        **Option B: [Description]**
+        - Pros: ...
+        - Cons: ...
+      placeholder: |
+        **Option A: Implement offline-first storage**
+        - Pros: Meets invariant INV-010, better UX
+        - Cons: More complex, longer timeline
+        
+        **Option B: Require online connectivity**
+        - Pros: Simpler implementation
+        - Cons: Violates INV-010, poor UX
+    validations:
+      required: false
+
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact of Delay or Wrong Decision
+      description: What happens if this decision is delayed or incorrect? What is at risk?
+      placeholder: |
+        - If delayed: Work on feature X is blocked
+        - If wrong: We violate invariant INV-010
+        - Risk: Loss of offline capability
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: invariants
+    attributes:
+      label: Affected Invariants
+      description: Which governance invariants are affected by this decision?
+      options:
+        - label: "INV-001: GitHub is source of truth"
+        - label: "INV-010: Offline-first"
+        - label: "INV-012: Multi-repository topology"
+        - label: "INV-013: Test-first development"
+        - label: "INV-014: Founder decisions are explicit and immutable"
+
+  - type: textarea
+    id: recommendation
+    attributes:
+      label: Recommendation (Optional)
+      description: If you have a recommendation, provide it with rationale. The Founder is not bound by this.
+      placeholder: "We recommend Option A because..."
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        ## Important
+        
+        ⛔ **Until a Founder Decision ID is issued, all related work must stop.**
+        
+        - Do not proceed with implementation
+        - Do not make assumptions
+        - Wait for explicit Founder decision
+        - Decision will be logged as FD-YYYY-NNN
